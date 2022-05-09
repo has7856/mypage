@@ -43,7 +43,17 @@ $(function () {
             $("#burgur").addClass('on');
           }  
     });
-
-    
+    var flag = 0;
+    $(".inner-wrap").hide();
+    $(".inner-wrap").eq(0).show();
+    $(window).on("wheel", function(event){
+      var dir = event.originalEvent.wheelDelta;
+      if(dir > 0 && flag > 0){
+        flag--;
+      }else if(flag < 3){
+        flag++;
+      }
+      $(".inner-wrap").eq(flag).delay(400).fadeIn(1000);
+    });
 });
 

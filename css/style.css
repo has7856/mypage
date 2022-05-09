@@ -475,7 +475,6 @@ progress {
     justify-content: space-between;
 }
 
-
 .works-wrap > h2 {
     display: block;
     width: 100%;
@@ -506,7 +505,7 @@ progress {
     height: 70%;
     overflow: hidden;
 }
-.gallery-img > img{
+.gallery-img img{
     height: 100%;
     margin-left: -100px;
 }
@@ -536,8 +535,3 @@ progress {
 .gallery-title > p{
     font-size: 0.8rem;
 }
-.portfolio{
-    box-shadow: 5px 5px 8px #f16b6d5d;
-}
-
-
