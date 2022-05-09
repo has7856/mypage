@@ -1,0 +1,543 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #141414;
+    color: white;
+}
+
+a:link,
+a:visited {
+    color: inherit;
+}
+
+/* .inner-wrap */
+.inner-wrap {
+    width: 60%;
+    margin: 0 auto;
+    padding: 1.2rem;
+    height: 100%;
+}
+
+
+/* #first-section */
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+
+#logo {
+    height: 80px;
+}
+
+/* 햄버거 메뉴 */
+#header > div {
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    display: block;
+}
+
+.burgur {
+    top: 60px;
+    position: absolute;
+    width: 35px;
+    height: 2px;
+    background: white;
+}
+
+.burgur .top-line {
+    width: 35px;
+    height: 2px;
+    background-color: white;
+    bottom: -10px;
+    content: '';
+    position: absolute;
+    left: 0;
+    -webkit-transition: -webkit-transform .3s;
+    transition: transform .3s;
+}
+
+.burgur.on {
+    width: 0;
+}
+
+.burgur.on .bot-line {
+    -webkit-transform: translateY(15px) rotate(135deg);
+    transform: translateY(15px) rotate(135deg);
+}
+
+.burgur.on .top-line {
+    -webkit-transform: translateY(-5px) rotate(-135deg);
+    transform: translateY(-5px) rotate(-135deg);
+}
+
+.burgur .bot-line {
+    width: 35px;
+    height: 2px;
+    background-color: white;
+    top: -10px;
+    content: '';
+    position: absolute;
+    left: 0%;
+    -webkit-transition: -webkit-transform .3s;
+    transition: transform .3s;
+}
+
+
+/* 타이핑 효과 */
+#title {
+    position: absolute;
+    width: 80%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.main_content {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Raleway', sans-serif;
+}
+
+.maintitle span {
+    color: #f16b6e;
+    font-family: 'S-CoreDream-6Bold';
+    font-weight: bold;
+}
+
+.maintitle h3 {
+    padding-right: 0.5rem;
+    color: #fff;
+    font-size: 3.6rem;
+    font-weight: 100;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 5px solid #f16b6e;
+    animation: typing 3.5s steps(40, end),
+        cursor .7s step-end infinite;
+}
+
+.maintitle h4 {
+    margin-top: 1rem;
+    font-size: 2rem;
+}
+
+.maintitle h5 {
+    margin-top: 4rem;
+    font-size: 1.2rem;
+    font-weight: 100;
+}
+
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes cursor {
+    0% {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: #f16b6e;
+    }
+
+    100% {
+        border-color: transparent;
+    }
+}
+
+/* wheel 애니메이션 */
+#mouse {
+    height: 45px;
+    width: 30px;
+    border-radius: 20px;
+    transform: none;
+    border: 1px solid #f16b6e;
+}
+
+#wheel {
+    animation: mouse-wheel 1.2s ease infinite;
+    height: 5px;
+    width: 2px;
+    display: block;
+    margin: 5px auto;
+    background: #f16b6e;
+    position: relative;
+}
+
+#scroll-icon-box {
+    position: fixed;
+    margin: auto;
+    bottom: 5%;
+    left: calc(50% - 13px);
+    width: 26px;
+}
+
+@keyframes mouse-wheel {
+    0 {
+        top: 1px;
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    50% {
+        top: 2px;
+    }
+
+    100% {
+        top: 3px;
+        opacity: 0;
+        -webkit-transform: translateY(6px);
+        -ms-transform: translateY(6px);
+        transform: translateY(6px);
+    }
+}
+
+/* about section */
+.about-info {
+    display: flex;
+    justify-content: center;
+    column-gap: 3rem;
+    align-items: center;
+}
+
+#about-img img {
+    width: 320px;
+}
+
+#about-profile h2,
+h3 {
+    font-size: 4rem;
+}
+
+#about-profile h3 {
+    font-weight: bold;
+    margin-bottom: 1.2rem;
+    color: #f16b6e;
+}
+
+#about-profile p {
+    line-height: 2rem;
+}
+
+#about-profile p span {
+    color: #f16b6e;
+}
+
+#motto {
+    margin-top: 1rem;
+}
+
+.motto {
+    font-size: 1.4rem;
+    display: block;
+    color: #f16b6e;
+}
+
+#motto2 {
+    margin-bottom: 1rem;
+    margin-left: 4rem;
+}
+
+
+/* 프로그레스 바 */
+progress {
+    opacity: 0;
+}
+
+.progress-element {
+    width: 300px;
+    margin: 0 0 10px;
+    margin-bottom: 3rem;
+}
+
+.progress-container {
+    position: relative;
+    background: #eee;
+    border: 1px solid white;
+    height: 20px;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.progress-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background: #f16b6e;
+}
+
+.progress-element--html .progress-container::before {
+    animation: progress-html 1s ease-in forwards;
+}
+
+.progress-element--css .progress-container::before {
+    animation: progress-css 1s ease-in forwards;
+}
+
+.progress-element--javascript .progress-container::before {
+    animation: progress-javascript 1s ease-in forwards;
+}
+
+.progress-element--photoshop .progress-container::before {
+    animation: progress-photoshop 1s ease-in forwards;
+}
+
+.progress-element--illustrate .progress-container::before {
+    animation: progress-illustrate 1s ease-in forwards;
+}
+
+.progress-element--indesign .progress-container::before {
+    animation: progress-indesign 1s ease-in forwards;
+}
+
+.progress-label {
+    position: relative;
+    color: #f16b6e;
+    font-size: 1.4rem;
+    margin-bottom: -1rem;
+}
+
+@property --num {
+    syntax: "<integer>";
+    initial-value: 0;
+    inherits: false;
+}
+
+.progress-label::after {
+    counter-reset: num var(--num);
+    content: counter(num) "%";
+    position: absolute;
+    top: 1rem;
+    right: 0;
+}
+
+.progress-element--html .progress-label::after {
+    animation: progress-text-html 1s ease-in forwards;
+}
+
+.progress-element--css .progress-label::after {
+    animation: progress-text-css 1s ease-in forwards;
+}
+
+.progress-element--javascript .progress-label::after {
+    animation: progress-text-javascript 1s ease-in forwards;
+}
+
+.progress-element--photoshop .progress-label::after {
+    animation: progress-text-photoshop 1s ease-in forwards;
+}
+
+.progress-element--illustrate .progress-label::after {
+    animation: progress-text-illustrate 1s ease-in forwards;
+}
+
+.progress-element--indesign .progress-label::after {
+    animation: progress-text-indesign 1s ease-in forwards;
+}
+
+@keyframes progress-html {
+    to {
+        width: 95%;
+    }
+}
+
+@keyframes progress-css {
+    to {
+        width: 80%;
+    }
+}
+
+@keyframes progress-javascript {
+    to {
+        width: 65%;
+    }
+}
+
+@keyframes progress-photoshop {
+    to {
+        width: 90%;
+    }
+}
+
+@keyframes progress-illustrate {
+    to {
+        width: 90%;
+    }
+}
+
+@keyframes progress-indesign {
+    to {
+        width: 50%;
+    }
+}
+
+@keyframes progress-text-html {
+    to {
+        --num: 95;
+    }
+}
+
+@keyframes progress-text-css {
+    to {
+        --num: 80;
+    }
+}
+
+@keyframes progress-text-javascript {
+    to {
+        --num: 65;
+    }
+}
+
+@keyframes progress-text-photoshop {
+    to {
+        --num: 90;
+    }
+}
+
+@keyframes progress-text-illustrate {
+    to {
+        --num: 90;
+    }
+}
+
+@keyframes progress-text-indesign {
+    to {
+        --num: 50;
+    }
+}
+
+.skills {
+    display: flex;
+    align-items: center;
+}
+.skills h2 {
+    display: block;
+    width: 100%;
+    margin-bottom: 3rem;
+    font-size: 2rem;
+    color: white;
+}
+
+.progress-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    column-gap: 7rem;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* .expertise */
+.expertise-img {
+    display: flex;
+    justify-content: space-between;
+}
+
+.expertise-img > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.expertise-img > div h2{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.expertise-img > div p{
+    font-size: 1rem;
+    line-height: 1.2rem;
+}
+.expertise-img img {
+    width: 30%;
+}
+
+/* works */
+.works{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.works-wrap > h2 {
+    display: block;
+    width: 100%;
+    margin-bottom: 3rem;
+    font-size: 2rem;
+    color: white;
+}
+
+.works-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 7rem;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+#works-gallery{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+#works-gallery > div{
+    width: 250px;
+    height: 350px;
+    background-color: white;
+}
+.gallery-img{
+    height: 70%;
+    overflow: hidden;
+}
+.gallery-img > img{
+    height: 100%;
+    margin-left: -100px;
+}
+.gallery-title{
+    height: 30%;
+    background-color: #f16b6e;
+    text-align: center;
+    line-height: 2rem;
+}
+#gnb{
+    display: flex;
+    margin: 0 auto;
+    column-gap: 2rem;
+}
+#gnb > li > a{
+    color: #f16b6e;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 2rem;
+    padding: 5px 10px;
+    font-size: 1.2rem;
+}
+.gallery-title > h2{
+    font-size: 1.4rem;
+    padding-top: 1.2rem;
+}
+.gallery-title > p{
+    font-size: 0.8rem;
+}
+.portfolio{
+    box-shadow: 5px 5px 8px #f16b6d5d;
+}
+
+
