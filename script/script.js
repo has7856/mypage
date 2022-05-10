@@ -36,11 +36,12 @@ $(function () {
 
       // 햄버거 메뉴 이벤트
     $("#header > div").click(function(){
-        $("#nav").stop().slideToggle();
         if($("#burgur").hasClass('on')){
             $("#burgur").removeClass('on');
+            $("nav").animate({"right" : "-25%"});
           } else{
             $("#burgur").addClass('on');
+            $("nav").animate({"right" : 0});
           }  
     });
     var flag = 0;
@@ -55,5 +56,11 @@ $(function () {
       }
       $(".inner-wrap").eq(flag).delay(400).fadeIn(1000);
     });
+    $("#maingnb > li,#fp-nav ul li").click(function(){
+      var index = $(this).index();
+      flag = index;
+      $(".inner-wrap").eq(flag).delay(400).fadeIn(1000);
+    });
+    
 });
 
