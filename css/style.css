@@ -39,14 +39,14 @@ a:visited {
 
 /* 햄버거 메뉴 */
 #header > div {
-    width: 35px;
-    height: 35px;
+    width: 50px;
+    height: 50px;
     cursor: pointer;
     display: block;
 }
 
 .burgur {
-    top: 60px;
+    top: 50px;
     position: absolute;
     width: 35px;
     height: 2px;
@@ -190,7 +190,7 @@ a:visited {
 }
 
 @keyframes mouse-wheel {
-    0 {
+    0% {
         top: 1px;
         opacity: 1;
         -webkit-transform: translateY(0);
@@ -546,19 +546,6 @@ progress {
     background-color: #f16b6e;
     text-align: center;
     line-height: 2rem;
-}
-#gnb{
-    display: flex;
-    margin: 0 auto;
-    column-gap: 2rem;
-}
-#gnb > li > a{
-    color: #f16b6e;
-    text-decoration: none;
-    display: block;
-    margin-bottom: 2rem;
-    padding: 5px 10px;
-    font-size: 1.2rem;
 }
 .gallery-title > h2{
     font-size: 1.4rem;

@@ -26,12 +26,7 @@ $(function () {
         },1500);
       }
       
-      $(document).ready(function(){
-        // Now to start autoTyping just call the autoType function with the 
-        // class of outer div
-        // The second paramter is the speed between each letter is typed.   
-        autoType(".type-js",200);
-      });
+      autoType(".type-js",200);
 
 
       // 햄버거 메뉴 이벤트
@@ -44,6 +39,8 @@ $(function () {
             $("nav").animate({"right" : 0});
           }  
     });
+
+
     var flag = 0;
     $(".inner-wrap").hide();
     $(".inner-wrap").eq(0).show();
@@ -61,6 +58,5 @@ $(function () {
       flag = index;
       $(".inner-wrap").eq(flag).delay(400).fadeIn(1000);
     });
-    
 });
 
